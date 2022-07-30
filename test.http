@@ -19,3 +19,6 @@ post {{url}}/login
   "username": "xxx",
   "password": "123456"
 }
+###
+get {{url}}/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZTQ5YzkxNzhjNzcyMjU4MDZiZmMzMSIsImlhdCI6MTY1OTE3NDc5Nn0.RKmJ5AdukHp2GFMdh_lMH2DoWRkbVS8vBvTVmgMkrSM
