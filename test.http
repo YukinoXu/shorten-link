@@ -1,17 +1,18 @@
 @url=http://localhost:3000/api
 @json=Content-Type: application/json
 
-###
+### Get All Users
 get {{url}}/users
-###
-post {{url}}/register
+### Register
+post {{url}}/users
 {{json}}
 
 {
   "username": "xxx",
-  "password": "123456"
+  "password": "123456",
+  "email": "xxx@outlook.com"
 }
-###
+### Login
 post {{url}}/login
 {{json}}
 
@@ -19,6 +20,22 @@ post {{url}}/login
   "username": "xxx",
   "password": "123456"
 }
-###
-get {{url}}/profile
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZTQ5YzkxNzhjNzcyMjU4MDZiZmMzMSIsImlhdCI6MTY1OTE3NDc5Nn0.RKmJ5AdukHp2GFMdh_lMH2DoWRkbVS8vBvTVmgMkrSM
+### Get user profile
+get {{url}}/users/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZTYyODEwNjVmYjM5YTVjYjFmMTFkMiIsImlhdCI6MTY1OTI1MjA0MX0.J5S63a0sIx8Ce5wS6ac-gpfxRbarqgRThe2W0HhXFZs
+
+### Create short url
+post {{url}}/shortenURL
+{{json}}
+
+{
+  "url": "https://www.baidu.com"
+}
+
+### Delete url
+delete {{url}}/shortenURL
+{{json}}
+
+{
+  "url": "https://www.baidu.com"
+}
